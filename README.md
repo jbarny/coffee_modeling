@@ -20,9 +20,9 @@ It boils down to one question...
 
 We used several machine learning models from the `Scikit-Learn`, `Tensorflow` and `Keras` libraries to predict coffee quality scores based on several attributes as defined by the Coffee Quality Institute. Coffee is evaluated by licensed quality graders ("Q Graders") based on several criteria, including aroma, flavor, aftertaste, acidity, body, balance, uniformity, clean cup, sweetness, cupper points and defects. We considered these criteria, as well as country of origin , farm region, farm owner, farm name, altitude and processing method to determine which factors most influence the overall quality of a coffee, and to predict coffee quality scores on a set of "testing" data, based on a set of "training" data. We then used historical high, low and opening stock prices to make predictions on closing stock prices using the same methods.
 
-Coffee Quality Institute: https://www.coffeeinstitute.org/
-Quality Data Source: https://github.com/jldbc/coffee-quality-database
-Price Data Source: https://www.investing.com/commodities/us-coffee-c-historical-data
+* Coffee Quality Institute: https://www.coffeeinstitute.org/
+* Quality Data Source: https://github.com/jldbc/coffee-quality-database
+* Price Data Source: https://www.investing.com/commodities/us-coffee-c-historical-data
 
 # Coffee Quality Modeling
 
@@ -44,7 +44,7 @@ Again, we used a regressor (`RandomForestRegressor` instead of `RandomForestClas
 
 We did uncover some new information from the random forest regression, however. We were able to answer our initial question of “what makes a really good cup of coffee?” i.e. which features are most important when evaluating coffee quality? We examined determine the most important features used for the model and found that clean cup was the most important feature in predicting impact on coffee quality, followed by flavor and aftertaste.
 
-## Neural Network
+## Neural Networks
 
 The last models trained on our coffee quality data were two neural networks--deep and normal. We used a linear output activation and `mean_squared_error` and `mean_absolute_error` for our loss functions. The normal neural network performed with a final loss of about 12.26 and a mean absolute error of 2.39, which is an improvement from 3783.52 and 54.11, respectively, on the initial epoch. After adding more hidden layers, the deep neural network performed with an even lower loss of 4.76 and mean absolute error of 1.43.
 
@@ -70,12 +70,14 @@ The closing, opening, high, and low prices tend to be similar as they show very 
 
 It is fair to say that price may fluctuate over time due to economic reasons, but prices remain relatively stable on any given day. Boxplot, histograms, and price trend graphs are visualized below to assist these findings.
 
-## Price Modeling--Linear Models
+## Linear Models
 
 Before creating any models, we decided which feature to assign to our y values. We decided the most relevant feature to predict would be the closing price, leaving opening, high and low prices to act as our X values. Plotting X and y returns a linear trend, suggesting linear modeling may be a good choice for this data.
 
 Linear regression, Ridge regression, Lasso regression, ElasticNet regression, and Decision tree regression were selected to build models and predict the coffee stock prices. Each of these models returned an accuracy over 0.98, and when actual price and predicted price are plotted against each other it creates a linear graph. The noise in the graphs are so minute, it is negletable.
 
 We trained four linear models on our data: Linear regression, Lasso, Ridge and Elasticnet. All the linear models performed quite well, all with over 99% accuracy, and did not require hyperparameter tuning. Predicted scores for each model were plotted against actual scores using Matplotlib subplots to compare them side by side.
+
+## Analysis
 
 As noted in the coffee data analysis, High price is the most important attribute for predicting future coffee price. Open price is the second attribute predicting future coffee price. The error of each model is lower than 0.0001. R2 of each model is very close to 1. The R2 values of Linear regression and Ridge regression are 0.99935, which are the higher than other models by 0.001. All models would be good to predict the future coffee price, but if almost perfect accuracy is required, then Linear or Ridge regression would be the best choice to use for prediction of coffee future price.
