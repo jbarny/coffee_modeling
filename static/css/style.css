@@ -132,15 +132,15 @@ padding-top: 15px;
 }
 .navbar div{
     margin: inherit; 
-    background-color: #A18462 ;  
+    /* background-color: #A18462 ;   */
 }
 .navbar-brand{
     padding: 10px !important; 
 }
-.dropdown-menu div {
+/* .dropdown-menu div {
     background-color: white;
 
-}
+} */
 button{
     margin-right: 30px; 
 }
