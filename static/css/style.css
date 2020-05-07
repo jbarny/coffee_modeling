@@ -137,7 +137,7 @@ padding-top: 15px;
 .navbar-brand{
     padding: 10px !important; 
 }
-.dropdown-menu {
+.dropdown-menu div {
     background-color: white;
 
 }
