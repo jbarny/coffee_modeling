@@ -128,7 +128,6 @@ padding-top: 15px;
 
 .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
     background-color: inherit;
-    font-size: 12px;
     }
 }
 @media(max-width: 992px){
