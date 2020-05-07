@@ -1,4 +1,4 @@
-![images/beans_border.png](images/beans_border.png)
+![images/beans.png](images/beans.png)
 
 # COFFEEPEDIA
 
