@@ -91,10 +91,11 @@
         </p>
         <img src="images/initial_features_vs_total_score.jpg" class="rounded " alt="Feature Comparision">
         <p>
-          Because some of our X values were categorical in nature (Country of Origin and Processing Method), we encoded X 
-          using Ordinal Encoder before splitting our data into training and testing sets. This method retained all values 
-          in a single column and assigned an integer to each unique string, rather than using binary encoding to create two 
-          dummy columns for each unique value. We then split the data into training (80%) and testing (20%) sets.
+          Because some of our X values were categorical in nature (country of origin, farm region, farm owner, farm name, and 
+          processing method), we encoded X using Ordinal Encoder before splitting our data into training and testing sets. 
+          This method retained all values in a single column and assigned an integer to each unique string, rather than using 
+          binary encoding to create two dummy boolean columns for each unique value. We then split the data into training (80%) 
+          and testing (20%) sets.
         </p>
         <img src="images/quality_preprocessing.png" style="padding-left:80px; padding-right:80px;" class="rounded " alt="Preprocessing">
 
