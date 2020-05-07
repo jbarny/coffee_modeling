@@ -1,3 +1,5 @@
+![images/beans_border.png](images/beans_border.png)
+
 # COFFEEPEDIA
 
 We used several machine learning models from the `Scikit-Learn`, `Tensorflow` and `Keras` libraries to predict coffee quality scores based on several attributes as defined by the Coffee Quality Institute. Coffee is evaluated by licensed quality graders ("Q Graders") based on several criteria, including aroma, flavor, aftertaste, acidity, body, balance, uniformity, clean cup, sweetness, cupper points and defects. We considered these criteria, as well as country of origin , farm region, farm owner, farm name, altitude and processing method to determine which factors most influence the overall quality of a coffee, and to predict coffee quality scores on a set of "testing" data, based on a set of "training" data. 
@@ -65,5 +67,3 @@ Linear regression, Ridge regression, Lasso regression, ElasticNet regression, an
 We trained four linear models on our data: Linear regression, Lasso, Ridge and Elasticnet. All the linear models performed quite well, all with over 99% accuracy, and did not require hyperparameter tuning. Predicted scores for each model were plotted against actual scores using Matplotlib subplots to compare them side by side.
 
 As noted in the coffee data analysis, High price is the most important attribute for predicting future coffee price. Open price is the second attribute predicting future coffee price. The error of each model is lower than 0.0001. R2 of each model is very close to 1. The R2 values of Linear regression and Ridge regression are 0.99935, which are the higher than other models by 0.001. All models would be good to predict the future coffee price, but if almost perfect accuracy is required, then Linear or Ridge regression would be the best choice to use for prediction of coffee future price.
-
-![images/beans_border.png](images/beans_border.png)
