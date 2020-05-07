@@ -128,6 +128,12 @@ padding-top: 15px;
  }
  
 /* Media Queries */
+@media (max-width: 768px) {
+    .md-navbar-color {
+        background: #A18462;
+    }
+}
+
 @media(max-width: 992px){
 
 .navbar{
