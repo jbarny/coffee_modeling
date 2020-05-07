@@ -2,21 +2,33 @@
 
 # COFFEEPEDIA
 
-We used several machine learning models from the `Scikit-Learn`, `Tensorflow` and `Keras` libraries to predict coffee quality scores based on several attributes as defined by the Coffee Quality Institute. Coffee is evaluated by licensed quality graders ("Q Graders") based on several criteria, including aroma, flavor, aftertaste, acidity, body, balance, uniformity, clean cup, sweetness, cupper points and defects. We considered these criteria, as well as country of origin , farm region, farm owner, farm name, altitude and processing method to determine which factors most influence the overall quality of a coffee, and to predict coffee quality scores on a set of "testing" data, based on a set of "training" data. 
+Ahh... coffee. 
 
-Essentially, we want to answer the following question—
+Many of us start each day with a steaming hot cup of coffee, but what do we really know about what makes a coffee good or not?
+
+Coffee quality is evaluated by producers, buyers and licensed quality graders ("Q Graders") by a process known as "cupping", or tasting. Through a process of smelling, brewing and slurping, Q graders rate coffee based on several criteria, including aroma, flavor, aftertaste, acidity, body, balance, uniformity, cleanness, and sweetness. 
+
+Essentially, we want to answer the question...
 
 **What makes a *really* good cup of coffee?**
+
+Americans drink an average of 2 cups of coffee per day. There are more than 15,000 Starbucks in the United States alone. The retail coffee industry in the United States is a booming $5.18 billion business. Coffee future stock price becomes very important in business as it will determine the price of the raw coffee bean. Coffee growers and buyers would have opposite minds to earn profit in their respective businesses-coffee growers would want high prices and coffee buyers would want low prices. 
+
+It boils down to one question...
+
+**What if we can predict the stock price?**
+
+We used several machine learning models from the `Scikit-Learn`, `Tensorflow` and `Keras` libraries to predict coffee quality scores based on several attributes as defined by the Coffee Quality Institute. Coffee is evaluated by licensed quality graders ("Q Graders") based on several criteria, including aroma, flavor, aftertaste, acidity, body, balance, uniformity, clean cup, sweetness, cupper points and defects. We considered these criteria, as well as country of origin , farm region, farm owner, farm name, altitude and processing method to determine which factors most influence the overall quality of a coffee, and to predict coffee quality scores on a set of "testing" data, based on a set of "training" data. We then used historical high, low and opening stock prices to make predictions on closing stock prices using the same methods.
 
 Coffee Quality Institute: https://www.coffeeinstitute.org/
 Quality Data Source: https://github.com/jldbc/coffee-quality-database
 Price Data Source: https://www.investing.com/commodities/us-coffee-c-historical-data
 
+# Coffee Quality Modeling
+
 Before modeling, we determined which columns will be our X and y values. Because we are predicting quality based on coffee attributes, we decided our y value would be Total Cup Points (basically, the total coffee score) and our X values would be everything else--all grading criteria as well as a few other categorical descriptive attributes. Because some of our X values were categorical in nature (Country of Origin and Processing Method), we encoded X using Ordinal Encoder before splitting our data into training and testing sets. This method retaineds all values in a single column and assigneds an integer to each unique string, rather than using binary encoding to create two dummy columns for each unique value. We then split the data into training (80%) and testing (20%) sets.
 
 We trained several models on our data--4 linear models (linear regression, lasso, ridge and elasticnet), support vector regression, random forest regression and normal and deep neural networks.
-
-# Coffee Quality Modeling
 
 ## Linear Models
 
