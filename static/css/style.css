@@ -33,7 +33,7 @@ body{
     font-size: 14px ;
 }
 a{
-    color: #6D8092;
+    color: brown;
     font-size: 14px; 
 }
 .nav-link:hover{
@@ -84,11 +84,7 @@ p{
     background-color: white; 
 
   }
-/* Table */
-  .table{
-    font-size: 14px; 
-    border-top-color: white !important; 
-}
+
 /* Footer */
 footer{
 
@@ -128,12 +124,6 @@ padding-top: 15px;
  }
  
 /* Media Queries */
-@media (max-width: 768px) {
-    .md-navbar-color {
-        background: #A18462;
-    }
-}
-
 @media(max-width: 992px){
 
 .navbar{
@@ -142,7 +132,7 @@ padding-top: 15px;
 }
 .navbar div{
     margin: inherit; 
-    background-color: white ;  
+    background-color: #A18462 ;  
 }
 .navbar-brand{
     padding: 10px !important; 
