@@ -137,7 +137,10 @@ padding-top: 15px;
 .navbar-brand{
     padding: 10px !important; 
 }
+.dropdown-menu, .nav-item {
+    background-color: inherit;
 
+}
 button{
     margin-right: 30px; 
 }
