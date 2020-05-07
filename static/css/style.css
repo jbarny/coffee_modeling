@@ -1,5 +1,4 @@
 body{
-    /*background-color: #EDEDED; */
     background-color:white; 
 }
 /* Navbar */
@@ -41,7 +40,7 @@ a{
    }
 
 .navbar-brand:hover{
-color: white !important;
+color: #fff !important;
 }
 /* Images */
 img{
@@ -137,10 +136,10 @@ padding-top: 15px;
 .navbar-brand{
     padding: 10px !important; 
 }
-/* .dropdown-menu div {
-    background-color: white;
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: inherit;
 
-} */
+}
 button{
     margin-right: 30px; 
 }
